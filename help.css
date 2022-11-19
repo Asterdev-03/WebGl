@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+@keyframes pan {
+  100% {
+    background-position: 15% 50%;
+  }
+}
+
+body {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0 24px;
+  background-image: url("image.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: pan 6s infinite alternate linear;
+}
+
+@media (width >= 500px) {
+  body {
+    padding: 0;
+  }
+}
+
+.help {
+  width: 100%;
+  padding: 130px 10px;
+  border: 7px solid blue;
+  border-radius: 24px;
+  background-color: rgb(35, 95, 206);
+  color: aliceblue;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media (width >= 500px) {
+  .help {
+    margin: 0;
+    width: 460px;
+  }
+}
+
+.help > h2 {
+  margin: 0 0 12px;
+  font-size: 26px;
+  font-weight: 500;
+}
